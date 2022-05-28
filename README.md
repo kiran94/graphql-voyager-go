@@ -1,5 +1,7 @@
 # go-voyager-graphql
 
+[![main](https://github.com/kiran94/graphql-voyager-go/actions/workflows/main.yml/badge.svg)](https://github.com/kiran94/graphql-voyager-go/actions/workflows/main.yml)
+
 go-voyager-graphql is a small package that allows you to serve the [graphql-voyager](https://github.com/IvanGoncharov/graphql-voyager) graph from a HTTP Server.
 
 ## Usage 
