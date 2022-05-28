@@ -4,6 +4,8 @@
 
 go-voyager-graphql is a small package that allows you to serve the [graphql-voyager](https://github.com/IvanGoncharov/graphql-voyager) graph from a HTTP Server.
 
+![image](./res/example.png)
+
 ## Usage 
 
 ```go
