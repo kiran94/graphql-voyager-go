@@ -2,13 +2,15 @@ package main
 
 import "fmt"
 
+// Repository provides dummy data for sample app
 type Repository interface {
 	QueryTutorial() []Tutorial
+    QueryAuthors() []Author
 }
 
-type DataRepository struct{}
+type dataRepository struct{}
 
-func (r DataRepository) QueryTutorial() []Tutorial {
+func (r dataRepository) QueryTutorial() []Tutorial {
 
 	author := Author{Name: "JK Rowling", Tutorials: []int{1}}
 	tutorial := Tutorial{ID: 1, Title: "GraphQL Tutorial", Author: author}
@@ -21,7 +23,7 @@ func (r DataRepository) QueryTutorial() []Tutorial {
 	return []Tutorial{tutorial}
 }
 
-func (r DataRepository) QueryAuthors() []Author {
+func (r dataRepository) QueryAuthors() []Author {
 	author := Author{Name: "JK Rowling", Tutorials: []int{1}}
 	author2 := Author{Name: "Stephen King", Tutorials: []int{}}
 	return []Author{author, author2}

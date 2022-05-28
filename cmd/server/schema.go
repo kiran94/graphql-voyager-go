@@ -2,6 +2,7 @@ package main
 
 import "github.com/graphql-go/graphql"
 
+// Tutorial for sample data
 type Tutorial struct {
 	ID       int
 	Title    string
@@ -9,17 +10,20 @@ type Tutorial struct {
 	Comments []Comment
 }
 
+// Author for sample data
 type Author struct {
 	Name      string
 	Tutorials []int
 }
 
+// Comment for sample data
 type Comment struct {
 	Body string
 }
 
+// GenerateSchema - Creates a Sample Schema for sample app
 func GenerateSchema() (*graphql.Schema, error) {
-	repo := DataRepository{}
+	repo := dataRepository{}
 
 	commentType := graphql.NewObject(
 		graphql.ObjectConfig{
