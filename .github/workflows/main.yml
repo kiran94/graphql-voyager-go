@@ -34,6 +34,13 @@ jobs:
       - name: Run Tests
         run: make test
 
+      - name: Run Integration
+        run: |
+          go run ./cmd/server &
+          sleep 5
+          curl --silent --insecure --fail --show-error --location http://127.0.0.1:8080/voyager > /dev/null
+          kill -9 %1
+
   release:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
